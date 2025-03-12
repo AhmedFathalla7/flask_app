@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Create Author{% endblock %}
+
+{% block content %}
+<div class="container pt-4">
+    <h2>Create Author</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary">{{ form.submit.label }}</button>
+    </form>
+</div>
+{% endblock %}

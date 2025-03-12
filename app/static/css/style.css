@@ -1,0 +1,13 @@
+
+.content{
+    min-height:84vh;
+}
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+main.container {
+    max-width: 1000px ;
+    padding-bottom: 80px;
+}

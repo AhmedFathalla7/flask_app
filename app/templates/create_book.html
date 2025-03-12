@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Create Book{% endblock %}
+
+{% block content %}
+<div class="container pt-4">
+    <h2>Create Book</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.description.label(class="form-label") }}
+            {{ form.description(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.publish_date.label(class="form-label") }}
+            {{ form.publish_date(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.price.label(class="form-label") }}
+            {{ form.price(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.age_group.label(class="form-label") }}
+            {{ form.age_group(class="form-select") }}
+        </div>
+        <div class="mb-3">
+            {{ form.author_id.label(class="form-label") }}
+            {{ form.author_id(class="form-select") }}
+        </div>
+        <div class="mb-3">
+            {{ form.image.label(class="form-label") }}
+            {{ form.image(class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary">{{ form.submit.label }}</button>
+    </form>
+</div>
+{% endblock %}
